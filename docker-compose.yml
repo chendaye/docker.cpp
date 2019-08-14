@@ -7,8 +7,8 @@ services:
     #   - /data/wtu/cpp:/var/wtu/cpp
     # restart: always
     # container_name: wtu-cpp
-    # networks:
-    #   - wtu-net
+    networks:
+      - wtu-net
  
 networks:
   wtu-net:
