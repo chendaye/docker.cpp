@@ -4,7 +4,7 @@ services:
     build: ./cpp
     hostname: wtu-cpp
     volumes:
-     - /data/wtu/cpp:/var/wtu/cpp
+     - /data/wtu/data/cpp:/var/wtu/cpp
     restart: always
     container_name: wtu-cpp
     networks:
