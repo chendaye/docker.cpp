@@ -11,6 +11,6 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # # Install build environment
-RUN apt-get install -y build-essential make git clang g++
+RUN apt-get install -y build-essential make git clang g++ vim
 
 # CMD ["/bin/bash"]
