@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM bretzel12/jenkins
 LABEL maintainer="Lengo<chendaye666@gmail.com>"
 
 ENV TZ "Asia/Shanghai"
@@ -10,7 +10,7 @@ RUN mkdir -p /var/wtu/cpp
 RUN apt-get update
 RUN apt-get upgrade -y
 
-# Install build environment
+# # Install build environment
 RUN apt-get install -y build-essential make git clang g++
 
-#CMD ["/bin/bash"]
+# CMD ["/bin/bash"]

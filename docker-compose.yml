@@ -1,12 +1,27 @@
-version: "3"
+version: "3.7"
 services:
   cpp:
     build: ./cpp
     hostname: wtu-cpp
     volumes:
      - /data/wtu/cpp:/var/wtu/cpp
+    ports:
+      - "8084:8080"
+      - "50000:50000"
     restart: always
     container_name: wtu-cpp
+    networks:
+      - wtu-net
+  neo4j:
+    build: ./neo4j
+    hostname: wtu-neo4j
+    volumes:
+     - /data/wtu/neo4j/data:/data
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    restart: always
+    container_name: wtu-neo4j
     networks:
       - wtu-net
 networks:
